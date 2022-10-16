@@ -227,7 +227,7 @@
 		"welcomePage.tileBackground": "#1f2430",
 		"welcomePage.tileShadow": "#12151cb3",
 		"welcomePage.progress.background": "#1a1f29",
-		//"welcomePage.buttonBackground": "#ffcc6666",
+	  //"welcomePage.buttonBackground": "#ffcc6666",
 		"walkThrough.embeddedEditorBackground": "#1c212b",
 		"widget.shadow": "#12151cb3",
 			},

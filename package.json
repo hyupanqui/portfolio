@@ -17,5 +17,15 @@
         "path": "./themes/BertDark-color-theme.json"
       }
     ]
-  }
+  },
+  "icon": "icons/logo.png",
+  "author": {
+    "name": "Humberto Yupanqui",
+    "email": "hyupanquia24@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/Hyupanqui/BertDark.git",
+    "type": "git"
+  },
+  "publisher": "yupanqui"
 }
