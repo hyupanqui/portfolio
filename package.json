@@ -1,0 +1,21 @@
+{
+  "name": "bertdark",
+  "displayName": "BertDark",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "BertDark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/BertDark-color-theme.json"
+      }
+    ]
+  }
+}
