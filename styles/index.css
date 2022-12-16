@@ -7,7 +7,7 @@
 
 body {
   background-color: #F1F1F1;
-  font-family: 'Raleway';
+  font-family: 'Raleway', monospace;
     -webkit-transition: .3s ease all;
       transition: .3s ease all;
 }
