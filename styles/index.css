@@ -1,36 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,700;1,700&family=Poppins:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,900;1,900&display=swap');
+
+/*
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 body {
-  background-color: #f9fafe;
-  font-family: 'Raleway';
+  background-color: #dce7ff;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
-  /*margin-top: 10px;*/
   margin: 10px 10px 10px 10px;
 }
 
 body.dark  {
   background: #0f0f18;
-  color: #dce7ff;
-}
-.nav li {
-  display: inline-block;
 }
 
-.nav-ul li{
-  margin: 7px;
-}
-
-div.navbar {
+header {
+  font-family: 'IBM Plex Sans', sans-serif;
   display: grid;
-  place-content: center;/*
+  place-content: center;
+  /*
   display: flex;
   align-items: center;
-  justify-content: center;*/
+  justify-content: center;
+  */
+}
+
+.nav-titles {
+  background: #c4cee6;
+  border: 10px solid #c4cee6;
+  border-radius: 15px;
+}
+
+body.dark .nav-titles {
+  background: #0b0b10;
+  border: 10px solid #0b0b10;
+  border-radius: 15px;
+}
+
+.titles {
+  display: flex;
+  gap: 15px;
+}
+
+li {
+  list-style-type: none;
 }
 
 a {
@@ -40,10 +61,19 @@ a {
   color: #000000;
 }
 
-body.dark a  {
+body.dark a {
   color: #dce7ff;
 }
 
+.dark-mode {
+  display: flex;
+  align-items: center;
+}
+
+
+.moon, .sun{
+  width: 15px;
+}
 
 /* Dark mode */
 .switch {
@@ -54,13 +84,14 @@ body.dark a  {
   cursor: pointer;
   display: flex;
   outline: none;
+  height: 20px;
 }
 
 .switch::after {
   content: "";
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   background: #f5e9e9;
   top: 0;
@@ -82,9 +113,9 @@ body.dark a  {
 }
 
 .switch span {
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
-  background: none;
+  width: 20px;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
