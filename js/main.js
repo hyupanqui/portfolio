@@ -1,23 +1,34 @@
- const btnSwitch = document.getElementById('switch');
+const btnSwitch = document.getElementById('switch');
 
- btnSwitch.addEventListener('click', () => {
-   document.body.classList.toggle('dark');
-   btnSwitch.classList.toggle('active');
- })
+btnSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  btnSwitch.classList.toggle('active');
 
-// const btnSwitch = document.getElementById('switch');
-// const body = document.body;
+  // Guarda el estado del modo en el almacenamiento local
+  if (document.body.classList.contains('dark')) {
+    localStorage.setItem('mode', 'dark');
+  } else {
+    localStorage.setItem('mode', 'light');
+  }
+});
 
-// btnSwitch.addEventListener('click', function() {
-//   const pers1 = body.classList.toggle('dark')
-//   const pers2 = localStorage.setItem('switch', pers1)
-//   btnSwitch.classList.toggle('active', pers2);
-// })
+// Verifica el estado del modo en el almacenamiento local al cargar la página
+const currentMode = localStorage.getItem('mode');
+if (currentMode === 'dark') {
+  document.body.classList.add('dark');
+  btnSwitch.classList.add('active');
+}
 
-// const valor1 = localStorage.getItem('switch')
 
-// if (valor1 == "true" ) {
-//   body.classList.add('dark')
-// } else {
-//   body.classList.remove('dark')
-// }
+/* 
+const btnSwitch = document.getElementById('switch');
+
+btnSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  btnSwitch.classList.toggle('active');
+  localStorage.setItem('mode', document.body.classList.contains('dark') ? 'dark' : 'light');
+});
+
+document.body.classList.toggle('dark', localStorage.getItem('mode') === 'dark');
+btnSwitch.classList.toggle('active', localStorage.getItem('mode') === 'dark');
+*/
