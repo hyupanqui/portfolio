@@ -30,5 +30,5 @@ btnSwitch.addEventListener('click', () => {
 });
 
 document.body.classList.toggle('dark', localStorage.getItem('mode') === 'dark');
-btnSwitch.classList.toggle('active', localStorage.getItem('mode') === 'dark');
+btnSwitch.classList.toggle('active', localStorage.getItem('mode') === 'dark'); 
 */
