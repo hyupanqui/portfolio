@@ -9,6 +9,7 @@ font-family: 'Raleway', sans-serif;
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -34,8 +35,8 @@ header {
 }
 
 .nav-titles {
-  background: #c4cee6;
-  border: 10px solid #c4cee6;
+  background: #bfe5ff;
+  border: 10px solid #bfe5ff;
   border-radius: 15px;
 }
 
@@ -75,6 +76,10 @@ body.dark a {
   width: 15px;
 }
 
+.moon {
+  width: 12px;
+}
+
 /* Dark mode */
 .switch {
   background: #222222;
@@ -103,7 +108,7 @@ body.dark a {
 }
 
 .switch.active {
-  background-color: orange;
+  background-color: #949db3;
   color: #111111;
 }
 
