@@ -48,6 +48,7 @@ body.dark .nav-titles {
 
 .titles {
   display: flex;
+  align-items: center;
   gap: 15px;
 }
 
@@ -66,12 +67,6 @@ body.dark a {
   color: #dce7ff;
 }
 
-.dark-mode {
-  display: flex;
-  align-items: center;
-}
-
-
 .moon, .sun{
   width: 15px;
 }
@@ -88,6 +83,7 @@ body.dark a {
   position: relative;
   cursor: pointer;
   display: flex;
+  align-items: center;
   outline: none;
   height: 20px;
 }
@@ -120,7 +116,5 @@ body.dark a {
 .switch span {
   width: 20px;
   color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
