@@ -19,7 +19,6 @@ if (currentMode === 'dark') {
   btnSwitch.classList.add('active');
 }
 
-
 /* 
 const btnSwitch = document.getElementById('switch');
 
