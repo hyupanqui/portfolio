@@ -18,16 +18,3 @@ if (currentMode === 'dark') {
   document.body.classList.add('dark');
   btnSwitch.classList.add('active');
 }
-
-/* 
-const btnSwitch = document.getElementById('switch');
-
-btnSwitch.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  btnSwitch.classList.toggle('active');
-  localStorage.setItem('mode', document.body.classList.contains('dark') ? 'dark' : 'light');
-});
-
-document.body.classList.toggle('dark', localStorage.getItem('mode') === 'dark');
-btnSwitch.classList.toggle('active', localStorage.getItem('mode') === 'dark'); 
-*/

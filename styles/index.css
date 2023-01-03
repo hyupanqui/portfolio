@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,700;1,700&family=Poppins:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;1,400&family=MonteCarlo&family=MonteCarlo&family=Poppins:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,600;1,600&display=swap');
 
 /*
 font-family: 'IBM Plex Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
+font-family: 'MonteCarlo', cursive;
 */
 
 * {
@@ -13,6 +14,7 @@ font-family: 'Raleway', sans-serif;
 }
 
 body {
+  margin: 30px 200px 30px 200px;
   background-color: #d0dfff;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
@@ -25,8 +27,7 @@ body.dark  {
 header {
 /*   display: grid;
   place-content: center; */
-
-  margin: 40px 200px 40px 200px;
+  margin-bottom: 50px;
   background-color: #dce7ff;
   border-radius: 16px;
   
@@ -37,7 +38,7 @@ body.dark header {
   border-radius: 16px;
 }
 
-.nav-titles {
+.nav-titles, .home {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,6 +47,13 @@ body.dark header {
 
 body.dark .nav-titles {
   padding: 10px;
+}
+
+.container-home {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 50px;
 }
 
 .titles {
@@ -71,10 +79,71 @@ body.dark a {
 
 .sun{
   width: 15px;
+  opacity: 1;
 }
 
 .moon {
   width: 12px;
+  opacity: 1;
+}
+
+img {
+  opacity: 0.03;
+  height: 60%;
+}
+
+
+p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 10px 0px;
+}
+
+body.dark p {
+  color: #d0dfff;
+}
+
+body.dark .card {
+  background-color: rgba(3, 0, 10, 0.541);
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  padding: 16px;
+}
+
+h1 {
+  font-family: 'MonteCarlo', cursive;
+}
+
+
+.typewriter {
+  position: relative;
+}
+
+.typewriter::after {
+  content: "";
+  border-left: 2px solid blueviolet;
+  background: #090E16;
+  right: 0;
+  height: 30px;
+  position: absolute;
+  animation: typewriter 3s infinite alternate steps(20);
+}
+
+@keyframes typewriter {
+  from {
+width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+body.dark h3, h4 {
+  color: #152344;
+}
+
+body.dark h1, h2 {
+
+  color: aqua;
 }
 
 /* Dark mode */
