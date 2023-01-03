@@ -102,8 +102,15 @@ body.dark p {
   color: #d0dfff;
 }
 
+.card {
+    background-color: rgba(155, 187, 255, 0.54);
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+    padding: 16px;
+}
+
 body.dark .card {
-  background-color: rgba(3, 0, 10, 0.541);
+  background-color: rgba(3, 0, 10, 0.540);
   border-radius: 6px;
   backdrop-filter: blur(10px);
   padding: 16px;
@@ -113,12 +120,26 @@ h1 {
   font-family: 'MonteCarlo', cursive;
 }
 
-
 .typewriter {
+  color: #090E16;
   position: relative;
 }
 
+body.dark .typewriter {
+  color: #d0dfff;
+}
+
 .typewriter::after {
+  content: "";
+  border-left: 2px solid blueviolet;
+  background: #d0dfff;
+  right: 0;
+  height: 30px;
+  position: absolute;
+  animation: typewriter 3s infinite alternate steps(20);
+}
+
+body.dark .typewriter::after {
   content: "";
   border-left: 2px solid blueviolet;
   background: #090E16;
@@ -142,7 +163,6 @@ body.dark h3, h4 {
 }
 
 body.dark h1, h2 {
-
   color: aqua;
 }
 
