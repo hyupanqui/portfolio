@@ -23,16 +23,13 @@ body.dark  {
 }
 
 header {
-  display: grid;
-  place-content: center;
+/*   display: grid;
+  place-content: center; */
+
   margin: 40px 200px 40px 200px;
   background-color: #dce7ff;
   border-radius: 16px;
-  /*
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  */
+  
 }
 
 body.dark header {
@@ -43,9 +40,8 @@ body.dark header {
 .nav-titles {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 10px;
-  gap: 760px;
 }
 
 body.dark .nav-titles {
@@ -64,7 +60,7 @@ li {
 
 a {
   font-family: 'Raleway', sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   text-decoration: none;
   color: #000000;
 }
