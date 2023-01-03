@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,700;1,700&family=Poppins:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,700;1,700&family=Poppins:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,600;1,600&display=swap');
 
 /*
 font-family: 'IBM Plex Sans', sans-serif;
@@ -13,20 +13,21 @@ font-family: 'Raleway', sans-serif;
 }
 
 body {
-  background-color: #dce7ff;
+  background-color: #d0dfff;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
-  margin: 10px 10px 10px 10px;
 }
 
 body.dark  {
-  background: #0f0f18;
+  background: #090E16;
 }
 
 header {
-  font-family: 'IBM Plex Sans', sans-serif;
   display: grid;
   place-content: center;
+  margin: 40px 200px 40px 200px;
+  background-color: #dce7ff;
+  border-radius: 16px;
   /*
   display: flex;
   align-items: center;
@@ -34,22 +35,27 @@ header {
   */
 }
 
+body.dark header {
+  background-color: rgba(123, 74, 226, 0.05);
+  border-radius: 16px;
+}
+
 .nav-titles {
-  background: #bfe5ff;
-  border: 10px solid #bfe5ff;
-  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 760px;
 }
 
 body.dark .nav-titles {
-  background: #0b0b10;
-  border: 10px solid #0b0b10;
-  border-radius: 15px;
+  padding: 10px;
 }
 
 .titles {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 li {
@@ -57,8 +63,8 @@ li {
 }
 
 a {
+  font-family: 'Raleway', sans-serif;
   font-size: 18px;
-  font-weight: bold;
   text-decoration: none;
   color: #000000;
 }
