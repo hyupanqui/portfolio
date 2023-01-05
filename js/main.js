@@ -1,6 +1,6 @@
-const btnSwitch = document.getElementById('switch');
+const btnSwitch = document.querySelector('.switch input');
 
-btnSwitch.addEventListener('click', () => {
+btnSwitch.addEventListener('change', () => {
   document.body.classList.toggle('dark');
   btnSwitch.classList.toggle('active');
 
@@ -18,3 +18,4 @@ if (currentMode === 'dark') {
   document.body.classList.add('dark');
   btnSwitch.classList.add('active');
 }
+
