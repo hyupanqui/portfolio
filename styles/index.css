@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;1,400&family=MonteCarlo&family=MonteCarlo&family=Poppins:ital,wght@0,900;1,900&family=Raleway:ital,wght@0,600;1,600&display=swap');
-
-/*
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Raleway:wght@500&family=Skranji&display=swap');/*
 font-family: 'IBM Plex Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
 font-family: 'MonteCarlo', cursive;
+font-family: 'JetBrains Mono', monospace;
+font-family: 'Skranji', cursive;
 */
 
 * {
@@ -76,9 +76,10 @@ li {
 }
 
 a {
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
   text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
   color: #000000;
 }
 
@@ -156,7 +157,13 @@ body.dark .card {
 }
 
 h1 {
-  font-family: 'MonteCarlo', cursive;
+  font-family: 'Skranji', cursive;
+  font-size: 28px;
+}
+
+h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
 }
 
 .typewriter {
@@ -208,16 +215,23 @@ body.dark h1, h2 {
 .button {
   width: 130px;
   height: 40px;
+  background-color: #8ec4ce;
+  border: none;
+  border-radius: 5px;
+}
+
+body.dark .button {
+  width: 130px;
+  height: 40px;
   background-color: #152344;
   border: none;
   border-radius: 5px;
 }
 
 /* Dark mode */
-
 .switch {
-  --width-of-switch: 2.6em;
-  --height-of-switch: 1.5em;
+  --width-of-switch: 41.6px;
+  --height-of-switch: 24px;
   --size-of-icon: 15px;
   --slider-offset: 5px;
   position: relative;
@@ -225,14 +239,12 @@ body.dark h1, h2 {
   height: var(--height-of-switch);
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -248,10 +260,10 @@ body.dark h1, h2 {
 .slider:before {
   position: absolute;
   content: "";
-  height: var(--size-of-icon,1.4em);
-  width: var(--size-of-icon,1.4em);
+  height: var(--size-of-icon, 22.4px);
+  width: var(--size-of-icon, 22.4px);
   border-radius: 20px;
-  left: var(--slider-offset,0.3em);
+  left: var(--slider-offset,4.8px);
   top: 50%;
   transform: translateY(-50%);
   background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
@@ -263,8 +275,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  left: calc(100% - (var(--size-of-icon,9em) + var(--slider-offset,1em)));
+  left: calc(100% - (var(--size-of-icon,144px) + var(--slider-offset,176px)));
   background: #090E16;
-  /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
   box-shadow: inset 0px -1px 2px -2px #8983f7,inset -6px -2px 0 0 #a3dafb;
 }
