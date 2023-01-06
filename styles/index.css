@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Raleway:wght@500&family=Skranji&display=swap');/*
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Raleway:wght@700&family=Skranji&display=swap');
+
+/*
 font-family: 'IBM Plex Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
 font-family: 'Raleway', sans-serif;
@@ -23,10 +25,6 @@ body {
   transition: .3s ease all;
 }
 
-body.dark  {
-  background: #090E16;
-}
-
 header {
   width: 75%;
   background-color: #dce7ff;
@@ -34,35 +32,11 @@ header {
   margin: 25px 0px 0px 0px;
 }
 
-body.dark header {
-  background-color: rgba(123, 74, 226, 0.05);
-  border-radius: 16px;
-}
-
-.nav-titles {
+.nav-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-}
-
-.home {
-  width: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 25px 0px 0px 0px;
-}
-
-body.dark .nav-titles {
-  padding: 10px;
-}
-
-.container-home {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 50px;
 }
 
 .titles {
@@ -78,13 +52,16 @@ li {
 a {
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
-  font-weight: 600;
   font-size: 14px;
   color: #000000;
 }
 
-body.dark a {
-  color: #dce7ff;
+.main {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0px 0px 0px;
 }
 
 img {
@@ -92,14 +69,26 @@ img {
   width: 100%;
 }
 
+.container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 50px;
+}
 
 p {
   font-family: 'IBM Plex Sans', sans-serif;
   margin: 10px 0px;
 }
 
-body.dark p {
-  color: #d0dfff;
+h1 {
+  font-family: 'Skranji', cursive;
+  font-size: 28px;
+}
+
+h2 span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 20px;
 }
 
 .card {
@@ -109,21 +98,14 @@ body.dark p {
   padding: 10px;
 }
 
-body.dark .card {
-  background-color: rgba(3, 0, 10, 0.540);
-  border-radius: 6px;
-  backdrop-filter: blur(10px);
-  padding: 10px;
-}
-
 .tools {
   display: flex;
   align-items: center;
-  padding: 0px 0px 0px 0px;
+  padding: 0px;
 }
 
 .circle {
-  padding: 0 4px;
+  padding: 0px 4px;
 }
 
 .box {
@@ -147,7 +129,7 @@ body.dark .card {
   background-color: #00ca4e;
 }
 
-.card-body {
+.card-main {
   padding-top: 10px;
   padding-bottom: 5px;
   display: flex;
@@ -156,39 +138,15 @@ body.dark .card {
   gap: 13px;
 }
 
-h1 {
-  font-family: 'Skranji', cursive;
-  font-size: 28px;
-}
-
-h2 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 20px;
-}
-
 .typewriter {
   color: #090E16;
   position: relative;
-}
-
-body.dark .typewriter {
-  color: #d0dfff;
 }
 
 .typewriter::after {
   content: "";
   border-left: 2px solid blueviolet;
   background: #d0dfff;
-  right: 0;
-  height: 30px;
-  position: absolute;
-  animation: typewriter 3s infinite alternate steps(20);
-}
-
-body.dark .typewriter::after {
-  content: "";
-  border-left: 2px solid blueviolet;
-  background: #090E16;
   right: 0;
   height: 30px;
   position: absolute;
@@ -204,20 +162,51 @@ width: 100%;
   }
 }
 
-body.dark h3, h4 {
-  color: #152344;
-}
-
-body.dark h1, h2 {
-  color: aqua;
-}
-
 .button {
   width: 130px;
   height: 40px;
   background-color: #8ec4ce;
   border: none;
   border-radius: 5px;
+}
+
+/* Dark mode */
+body.dark  {
+  background: #090E16;
+}
+
+body.dark header {
+  background-color: rgba(123, 74, 226, 0.05);
+}
+
+body.dark a {
+  color: #dce7ff;
+}
+
+body.dark p {
+  color: #d0dfff;
+}
+
+body.dark .typewriter {
+  color: hsla(271, 100%, 78%, 0.521);
+}
+
+body.dark .typewriter::after {
+  content: "";
+  border-left: 2px solid hsl(271, 100%, 76%);
+  background: #090E16;
+  right: 0;
+  height: 26px;
+  position: absolute;
+  animation: typewriter 4s infinite alternate steps(20);
+}
+
+body.dark h1 {
+  color: aqua;
+}
+
+body.dark .card {
+  background-color: rgba(3, 0, 10, 0.540);
 }
 
 body.dark .button {
@@ -228,7 +217,33 @@ body.dark .button {
   border-radius: 5px;
 }
 
-/* Dark mode */
+
+/* Resposive */
+@media only screen and (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .switch {
+    display: none;
+  }
+
+  .home, .about-me{
+    display: none;
+  }
+
+  .img-home {
+    width: 70%;
+    align-items: center;
+  }
+
+  .container-main {
+    margin-top: 30px;
+  }
+}
+
+/* Dark mode design */
 .switch {
   --width-of-switch: 41.6px;
   --height-of-switch: 24px;
@@ -267,7 +282,7 @@ body.dark .button {
   top: 50%;
   transform: translateY(-50%);
   background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
- transition: .4s;
+  transition: .4s;
 }
 
 input:checked + .slider {
