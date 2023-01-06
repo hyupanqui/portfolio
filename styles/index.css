@@ -32,6 +32,10 @@ header {
   margin: 25px 0px 0px 0px;
 }
 
+header:hover {
+  transform: scale(1.02);
+}
+
 .nav-header {
   display: flex;
   align-items: center;
@@ -54,6 +58,28 @@ a {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   color: #000000;
+}
+
+.a::after {
+  content: "";
+  background-color: #3bc5709c;
+  width: 0;
+  height: 1.2px;
+  display: block;
+  margin: auto;
+}
+
+.a:hover {
+  color: #ff605c;
+}
+
+body.dark .a:hover {
+  color: #fa7d7b;
+}
+
+.a:hover::after {
+  width: 100%;
+  transition: width 0.3s linear;
 }
 
 .main {
@@ -155,12 +181,12 @@ h2 span {
 
 @keyframes typewriter {
   from {
-width: 100%;
+    width: 100%;
   }
   to {
     width: 0;
   }
-}
+} 
 
 .button {
   width: 130px;
@@ -216,7 +242,7 @@ body.dark .button {
   border: none;
   border-radius: 5px;
 }
-
+/* End of dark mode */
 
 /* Resposive */
 @media only screen and (max-width: 600px) {
@@ -229,7 +255,7 @@ body.dark .button {
     display: none;
   }
 
-  .home, .about-me{
+  .home {
     display: none;
   }
 
@@ -294,3 +320,5 @@ input:checked + .slider:before {
   background: #090E16;
   box-shadow: inset 0px -1px 2px -2px #8983f7,inset -6px -2px 0 0 #a3dafb;
 }
+/* End of dark mode design */
+
