@@ -171,7 +171,7 @@ h2 span {
 
 .typewriter::after {
   content: "";
-  border-left: 2px solid blueviolet;
+  border-left: 2px solid #8a2be2;
   background: #d0dfff;
   right: 0;
   height: 30px;
